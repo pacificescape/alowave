@@ -3,6 +3,7 @@ import styles from './Donate.module.css'
 import { Link } from "react-router-dom";
 
 const Main = () => {
+    let title = 'На оплату серверов'
     return (
         <>
             <br />
@@ -15,41 +16,17 @@ const Main = () => {
                             className={styles.avatar}
                         />
                     </div>
-                    <div className={styles.textWrapper}>
-                        <div>Alowave — developer from my heart ♥</div>
-                        <div>Python agnostic level coder</div>
-                    </div>
-                    <div className={styles.buttonsWrapper}>
-                        <a className={styles.icon} href="https://github.com/alowave">
-                            <i className="fab fa-github"/>
-                        </a>
-                        <a className={styles.icon} href="https://t.me/lowdev">
-                            <i className="fab fa-telegram"/>
-                        </a>
-                        <a className={styles.icon} href="https://t.me/alowhair">
-                            <i class="fas fa-cut"></i>
-                        </a>
-                        <a className={styles.icon} href="https://t.me/alowave">
-                            <i class="fas fa-comment"></i>
-                        </a>
-                    </div>
-                    <div className={styles.donateWrapper}>
-                        <a href="/donate" className={styles.donate + '' +  styles.icon}>
-                            <i class="fas fa-coins"></i> <span>Donate</span>
-                        </a>
-                    </div>
-                    <div className={styles.projectsWrapper}>
-                        <div className={styles.project}>
-                            <a className={styles.projectIcon} href="https://t.me/yamdbot">
-                                <img src="https://t.me/i/userpic/320/yamdbot.jpg" alt="yamdbot"></img>
-                            </a>
-                        </div>
-                        <div className={styles.project}>
-                            <a className={styles.projectIcon} href="https://t.me/ccurbot">
-                                <img src="https://t.me/i/userpic/320/ccurbot.jpg" alt="ccurbot"></img>
-                            </a>
-                        </div>
-                    </div>
+                    <iframe
+                    src={`https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=${title}&successURL=https%3A%2F%2Falowave.cc&quickpay=shop&account=410015466202884`}
+                    className={styles.iframe}
+                    width="100%"
+                    height="313"
+                    frameBorder="0"
+                    allowtransparency="true"
+                    scrolling="no"
+                    title="Donate">
+
+                    </iframe>
                     <Link to="/">Main page</Link>
                 </main>
             </div>
