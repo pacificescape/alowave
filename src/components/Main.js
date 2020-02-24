@@ -25,12 +25,29 @@ const Main = () => {
                         <a className={styles.icon} href="https://t.me/lowdev">
                             <i className="fab fa-telegram"/>
                         </a>
-                        <a className={styles.icon} href="https://t.me/s/alowhair">
+                        <a className={styles.icon} href="https://t.me/alowhair">
                             <i class="fas fa-cut"></i>
                         </a>
                         <a className={styles.icon} href="https://t.me/alowave">
                             <i class="fas fa-comment"></i>
                         </a>
+                    </div>
+                    <div className={styles.donateWrapper}>
+                        <a href="/donate" className={styles.donate + '' +  styles.icon}>
+                            <i class="fas fa-coins"></i> <span>Donate</span>
+                        </a>
+                    </div>
+                    <div className={styles.projectsWrapper}>
+                        <div className={styles.project}>
+                            <a className={styles.projectIcon} href="https://t.me/yamdbot">
+                                <img src="https://t.me/i/userpic/320/yamdbot.jpg" alt="yamdbot"></img>
+                            </a>
+                        </div>
+                        <div className={styles.project}>
+                            <a className={styles.projectIcon} href="https://t.me/ccurbot">
+                                <img src="https://t.me/i/userpic/320/ccurbot.jpg" alt="ccurbot"></img>
+                            </a>
+                        </div>
                     </div>
                 </main>
             </div>

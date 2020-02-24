@@ -16,6 +16,8 @@ body {
   height: 100vh;
   background-color: rgb(31, 31, 31);
   background-position: 50% 90%;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #ccc;
 }
 
