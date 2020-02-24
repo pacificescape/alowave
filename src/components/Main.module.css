@@ -1,0 +1,60 @@
+.Main {
+    display: block;
+    width: 65%;
+    margin: 20vh auto;
+    padding: 15px;
+    border-radius: 5px;
+    /* border: 1px solid rgba(58, 58, 58, 0.6); */
+    background-color: rgba(40, 50, 76, 0.3);
+    box-shadow: 0 0 30px rgba(0,0,0,0.1);
+    text-align: center;
+    box-shadow: 10 10px 10 rgb(243, 0, 0);
+}
+
+@media screen and (max-device-width: 414px) {
+    .Main {
+        width: 85%;
+    }
+}
+
+.mainBlock {
+    margin: auto;
+}
+
+.avatarWrapper {
+    margin: auto;
+}
+
+.avatar {
+    margin: auto;
+    display: block;
+    border-radius: 160px;
+    width: 20%;
+    max-width: 100px;
+    min-width: 10px;
+}
+
+.textWrapper {
+    margin: 10px;
+}
+
+.buttonsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: fit-content;
+    font-size: 40px;
+}
+
+.icon {
+
+    margin: 10px;
+    transition: ease-in-out 0.2s;
+}
+
+.icon:hover {
+    margin: 9px;
+    font-size: 42px;
+    outline: none;
+    text-decoration: none;
+}

@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Raleway', sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #282c34;
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+} */
+
+#root {
+  height: 100vh;
+  background-color: rgb(31, 31, 31);
+  background-position: 50% 90%;
+  color: #ccc;
+}
+
+@media screen and (max-device-width: 414px) {
+  #root {
+    background-image: url(https://i.picsum.photos/id/765/1600/900.jpg);
+  }
+}
+
+@media screen and (min-device-width: 414px) {
+  #root {
+    background-image: url(https://i.picsum.photos/id/765/1920/1080.jpg);
+  }
+}
+
+a {
+  color: #ccc;
+  outline: none;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ccc;
+}
+
+a:active {
+  color: #ccc;
+  outline: none;
+  text-decoration: none;
+}
