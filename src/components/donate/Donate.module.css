@@ -1,4 +1,5 @@
-.Main {
+.Donate {
+    height: 370px;
     transform: scale(1);
     display: block;
     width: 40%;
@@ -14,9 +15,13 @@
 }
 
 @media screen and (max-device-width: 414px) {
-    .Main {
+    .Donate {
         width: 85%;
     }
+}
+
+.iframe {
+    padding: 15px 0 15px;
 }
 
 .mainBlock {
