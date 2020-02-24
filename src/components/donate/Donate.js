@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Main.module.css'
+import styles from './Donate.module.css'
 import { Link } from "react-router-dom";
 
 const Main = () => {
@@ -50,7 +50,7 @@ const Main = () => {
                             </a>
                         </div>
                     </div>
-                    <Link to="/donate">Donate page</Link>
+                    <Link to="/">Main page</Link>
                 </main>
             </div>
         </>
