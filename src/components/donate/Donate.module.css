@@ -55,6 +55,7 @@ form {
 
 .avatarWrapper {
     margin: auto;
+    user-select: none;
 }
 
 .avatar {
@@ -83,7 +84,7 @@ form {
     left: 0px;
     position: absolute;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.03);
     width: 30px;
     height: 100%;
 }
@@ -104,8 +105,8 @@ form {
     width: 11px;
     height: 11px;
     border-radius: 2px;
-    border-bottom: 1.5px solid;
-    border-right: 1.5px solid;
+    border-bottom: 1.5px solid #ccc;
+    border-right: 1.5px solid #ccc;
     margin: 192px 7px;
 }
 

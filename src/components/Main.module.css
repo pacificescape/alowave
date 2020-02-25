@@ -24,6 +24,7 @@
 
 .avatarWrapper {
     margin: auto;
+    user-select: none;
 }
 
 .avatar {
@@ -62,9 +63,10 @@
 }
 
 .donateWrapper {
+    user-select: none;
     margin: 15px auto -10px;
     width: fit-content;
-    padding: 4px 10px;
+    padding: 4px 10px 8px;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.07);
 }
@@ -84,6 +86,7 @@
     flex-wrap: wrap;
     width: fit-content;
     margin: 10px auto 0px;
+    user-select: none;
 }
 
 .myProjectsTitle {
