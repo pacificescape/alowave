@@ -1,8 +1,8 @@
 .Donate {
-    height: 500px;
+    height: auto;
     transform: scale(1);
     display: block;
-    width: 40%;
+    width: 50%;
     max-width: 700px;
     margin: 20vh auto;
     padding: 15px;
@@ -15,6 +15,7 @@
 @media screen and (max-device-width: 800px) {
     .Donate {
         width: 80%;
+        margin: 15vh auto;
     }
 }
 
@@ -33,7 +34,6 @@ form {
 
 
 .radioButton {
-    display: table;
     vertical-align: middle;
     height: 40px;
     position: relative;
@@ -77,6 +77,17 @@ form {
     padding: 0px 0px 4px;
 }
 
+.back2 {
+    float: left;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.05);
+    width: 30px;
+    height: 100%;
+}
+
 .arrow1 {
     float: left;
     transform: rotate(-45deg);
@@ -88,6 +99,38 @@ form {
     margin: 7px;
 }
 
+.arrow2 {
+    transform: rotate(135deg);
+    width: 11px;
+    height: 11px;
+    border-radius: 2px;
+    border-bottom: 1.5px solid;
+    border-right: 1.5px solid;
+    margin: 192px 7px;
+}
+
 .arrow3 {
     margin-left: 5px;
+}
+
+.disabledWallet {
+    width: 40px;
+    filter: grayscale(100%);
+}
+
+.enabledWallet {
+    width: 40px;
+}
+
+.wallet {
+    display: flex;
+    flex-direction: row !important;
+}
+
+.wallet :nth-child(even) {
+    margin: 0px;
+}
+
+.FormControlLabel {
+    margin: 5px;
 }

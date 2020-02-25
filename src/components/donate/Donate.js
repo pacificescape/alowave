@@ -9,6 +9,7 @@ import FormControl from '@material-ui/core/FormControl';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Radio from '@material-ui/core/Radio';
 import Button from '@material-ui/core/Button';
+import grey from '@material-ui/core/colors/grey';
 import { useState } from 'react';
 
 const useStyles = makeStyles(theme => ({
@@ -53,12 +54,18 @@ const Donate = () => {
                             className={styles.avatar}
                         />
                     </div>
-                    <div className={styles.back}>
+                    {/* <div className={styles.back}>
                         <Link to="/">
                             <div className={styles.arrow1}/>
                             <span className={styles.arrow3}>Donate</span>
                         </Link>
-                    </div>
+                    </div> */}
+                    <Link to="/">
+                        <div className={styles.back2}>
+                                <div className={styles.arrow2}/>
+                        </div>
+                    </Link>
+                    <br/>
                     {/*
                     <iframe
                         src={`https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=${title}&successURL=https%3A%2F%2Falowave.cc&quickpay=shop&account=410015466202884`}
@@ -71,16 +78,16 @@ const Donate = () => {
                         title="Donate">
                     </iframe> */}
 
-                    <form method="POST" action={"https://money.yandex.ru/quickpay/confirm.xml"} autocomplete="off">
+                    <form method="POST" action={"https://money.yandex.ru/quickpay/confirm.xml"} autoComplete="off">
                         <input type="hidden" name="receiver" value="410015466202884" />
                         <input type="hidden" name="formcomment" value="Alowave donation ♥" />
                         <input type="hidden" name="short-dest" value="Alowave donation ♥" />
                         <input type="hidden" name="quickpay-form" value="donate" />
                         <input type="hidden" name="targets" value="Назначение платежа" />
-                        <FormControl variant="outlined" >
+                        <FormControl variant="outlined" color="secondary" >
                             <InputLabel htmlFor="component-outlined">Ammount</InputLabel>
                             <OutlinedInput
-                                autocomplete="off"
+                                autoComplete="off"
                                 required
                                 id="component-outlined"
                                 placeholder={'100'}
@@ -90,10 +97,10 @@ const Donate = () => {
                             />
                         </FormControl>
                         <br />
-                        <FormControl variant="outlined" >
+                        <FormControl variant="outlined" color='secondary'>
                             <InputLabel htmlFor="component-outlined" >Comment</InputLabel>
                             <OutlinedInput
-                                autocomplete="off"
+                                autoComplete="off"
                                 id="component-outlined"
                                 placeholder={'Спасибо за ботa'}
                                 name="comment"
@@ -101,17 +108,38 @@ const Donate = () => {
                                 label="Comment"
                                 />
                         </FormControl>
-                        <br />
                         <div className={styles.radioButton}>
-                        <FormControl required variant="outlined" className={classes.FormControl} >
-                                <RadioGroup aria-label="gender" name="gender1" value={selectedTypeDePayment} onChange={handleChangeType}>
-                                <FormControlLabel value="AC" control={<Radio />} label="Банковской картой" />
-                                <FormControlLabel value="PC" control={<Radio />} label="Яндекс.Деньгами" />
+                        <FormControl required variant="outlined">
+                                <RadioGroup
+                                    aria-label="gender"
+                                    name="gender1"
+                                    value={selectedTypeDePayment}
+                                    onChange={handleChangeType}
+                                    className={styles.wallet}>
+                                <FormControlLabel
+                                    className={styles.FormControlLabel}
+                                    value="AC"
+                                    control={
+                                    <Radio
+                                    icon={<img src="AC.png" alt="AC" className={styles.disabledWallet}/>}
+                                    checkedIcon={<img src="AC.png" alt="AC" className={styles.enabledWallet}/>}
+                                    >
+                                    </Radio>}>
+                                </FormControlLabel>
+                                <FormControlLabel
+                                    className={styles.FormControlLabel}
+                                    value="PC"
+                                    control={
+                                    <Radio
+                                        icon={<img src="PC.gif" alt="PC" className={styles.disabledWallet}/>}
+                                        checkedIcon={<img src="PC.gif" alt="PC" className={styles.enabledWallet}/>}
+                                        ></Radio>}>
+                                </FormControlLabel>
                             </RadioGroup>
                         </FormControl>
                         </div>
                         <br />
-                        <Button variant="contained"  type="submit" disabled color="primary">
+                        <Button variant="contained"  type="submit" color="primary">
                             Перевести
                         </Button>
                     </form>
