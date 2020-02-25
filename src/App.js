@@ -16,7 +16,7 @@ function App() {
             <Donate/>
           </Route>
           <Route path="/">
-            <Main/>;
+            <Main/>
           </Route>
         </Switch>
 
