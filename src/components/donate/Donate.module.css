@@ -12,6 +12,7 @@
     box-shadow: 0 0 30px rgba(0,0,0,0.1);
     text-align: center;
     box-shadow: 10 10px 10 rgb(243, 0, 0);
+    color: #fff
 }
 
 @media screen and (max-device-width: 414px) {
@@ -25,14 +26,39 @@
 }
 
 form {
-    margin: 15px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    /* align-content: center; */
+    margin: auto;
+    width: fit-content;
+}
+
+form div {
+    margin: 8px;
+}
+
+.radioButton {
+    vertical-align: middle;
+    height: 40px;
+    position: relative;
 }
 
 .field {
-    margin-right: 30px;
+    display: block;
+    width: auto;
+    margin: 30px;
 }
+
+.field input {
+    color: #fff;
+    width: fit-content;
+}
+
+/* .field span {
+    width: 30px;
+} */
 
 .mainBlock {
     margin: auto;
@@ -49,64 +75,4 @@ form {
     width: 30%;
     max-width: 100px;
     min-width: 10px;
-}
-
-.textWrapper {
-    margin: 10px;
-}
-
-.buttonsWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    width: fit-content;
-    padding: 5px;
-    font-size: 30px;
-}
-
-.icon i {
-    display: block;
-    padding: 5px;
-    margin: 0px;
-    transition: ease-in-out 0.2s;
-}
-
-.icon i:hover {
-    transform: scale(1.1);
-    outline: none;
-    text-decoration: none;
-}
-
-.donateWrapper {
-    margin: auto;
-    width: fit-content;
-    padding: 4px 10px;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.07);
-}
-
-.donateWrapper i {
-    font-size: 25px;
-}
-
-.donateWrapper a {
-    font-size: 25px;
-    font-weight: lighter;
-    vertical-align: middle;
-}
-
-.projectsWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    width: fit-content;
-    margin: 10px auto 0px;
-}
-
-.project {
-    margin: 10px 10px 0px 10px;
-}
-
-.projectIcon img {
-    width: 30px;
-    border-radius: 10px;
 }

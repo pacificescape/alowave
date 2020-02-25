@@ -5,9 +5,11 @@ import { makeStyles } from '@material-ui/core';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import InputLabel from '@material-ui/core/InputLabel';
 import InputAdornment from '@material-ui/core/InputAdornment';
+import Input from '@material-ui/core/Input';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 import Radio from '@material-ui/core/Radio';
+import Button from '@material-ui/core/Button';
 import { useState } from 'react';
 
 // const useStyles = makeStyles(theme => ({
@@ -70,40 +72,49 @@ const Donate = () => {
                         <input type="hidden" name="short-dest" value="Alowave donation ♥" />
                         <input type="hidden" name="quickpay-form" value="donate" />
                         <input type="hidden" name="targets" value="Назначение платежа" />
-                        <TextField
-                            className={styles.field}
-                            name="sum"
-                            value="4568.25"
-                            data-type="number"
-                            defaultValue="Hello World"
-                            label="Amount"
-                            variant="outlined"
-                            id="outlined-required"
-                        />
-                        <TextField
-                            className={styles.field}
-                            id="outlined-basic"
-                            label="Outlined"
-                            variant="outlined"
-                            type="text"
-                            name="comment"
-                            value="Комментарий..."
-                        />
-                        <Radio
-                            checked={selectedValue === 'a'}
-                            onChange={handleChange}
-                            value="PC"
-                            name="paymentType"
-                            inputProps={{ 'aria-label': 'A' }}
-                        />Яндекс.Деньгами
-                        <Radio
-                            checked={selectedValue === 'b'}
-                            onChange={handleChange}
-                            value="AC"
-                            name="paymentType"
-                            inputProps={{ 'aria-label': 'B' }}
-                        />Банковской картой
-                        <input type="submit" value="Перевести" />
+                        <FormControl variant="outlined" className={styles.field}>
+                            <InputLabel htmlFor="component-outlined">Ammount</InputLabel>
+                            <OutlinedInput
+                                required
+                                data-type="number"
+                                id="component-outlined"
+                                value="4568.25"
+                                name="sum"
+                                onChange={handleChange}
+                                label="Sum"
+                            />
+                        </FormControl>
+                        <FormControl variant="outlined" className={styles.field}>
+                            <InputLabel htmlFor="component-outlined">Comment</InputLabel>
+                            <OutlinedInput
+                                id="component-outlined"
+                                value={'d'}
+                                name="comment"
+                                onChange={handleChange}
+                                label="Comment"
+                                />
+                        </FormControl>
+                        <div className={styles.radioButton}>
+                            <Radio
+                                checked={selectedValue === 'a'}
+                                onChange={handleChange}
+                                value="PC"
+                                name="paymentType"
+                                inputProps={{ 'aria-label': 'A' }}
+                            />Яндекс.Деньгами
+                        </div>
+                        <div className={styles.radioButton}>
+                            <Radio
+                                checked={selectedValue === 'b'}
+                                onChange={handleChange}
+                                value="AC"
+                                name="paymentType"
+                                inputProps={{ 'aria-label': 'B' }}
+                            />Банковской картой
+                        </div>
+                        <Button variant="contained"  type="submit" color="primary">
+                            Перевести
+                        </Button>
                     </form>
 
                 </main>
