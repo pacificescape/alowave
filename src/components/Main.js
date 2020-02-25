@@ -16,7 +16,7 @@ const Main = () => {
                         />
                     </div>
                     <div className={styles.textWrapper}>
-                        <div>Alowave — developer from my heart ♥</div>
+                        <div>Alowave — developer from my heart ♥ </div>
                         <div>Python agnostic level coder</div>
                     </div>
                     <div className={styles.buttonsWrapper}>
@@ -38,6 +38,7 @@ const Main = () => {
                             <i class="fas fa-coins"></i> <span>Donate</span>
                         </a>
                     </div>
+                    My projects:
                     <div className={styles.projectsWrapper}>
                         <div className={styles.project}>
                             <a className={styles.projectIcon} href="https://t.me/yamdbot">
@@ -50,7 +51,6 @@ const Main = () => {
                             </a>
                         </div>
                     </div>
-                    <Link to="/donate">Donate page</Link>
                 </main>
             </div>
         </>

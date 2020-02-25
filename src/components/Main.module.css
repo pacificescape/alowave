@@ -28,7 +28,7 @@
 }
 
 .avatar {
-    margin: auto;
+    margin: 5px auto;
     display: block;
     border-radius: 160px;
     width: 30%;
@@ -63,7 +63,7 @@
 }
 
 .donateWrapper {
-    margin: auto;
+    margin: 15px auto -10px;
     width: fit-content;
     padding: 4px 10px;
     border-radius: 5px;

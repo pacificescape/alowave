@@ -1,5 +1,5 @@
 .Donate {
-    height: 370px;
+    height: 500px;
     transform: scale(1);
     display: block;
     width: 40%;
@@ -22,6 +22,16 @@
 
 .iframe {
     padding: 15px 0 15px;
+}
+
+form {
+    margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.field {
+    margin-right: 30px;
 }
 
 .mainBlock {
