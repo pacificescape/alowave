@@ -1,16 +1,16 @@
 body {
   margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Raleway', sans-serif; */
+  font-size: 1.3em;
+  font-family: Verdana, Geneva, Tahoma, 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #282c34;
 }
 
-/* code {
+code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
-} */
+}
 
 #root {
   overflow: hidden;
@@ -19,7 +19,7 @@ body {
   background-position: 50% 90%;
   background-repeat: no-repeat;
   background-size: cover;
-  color: #ccc;
+  color: #fff;
 }
 
 @media screen and (max-device-width: 414px) {
@@ -35,19 +35,17 @@ body {
 }
 
 a {
-  color: #ccc;
+  color: #fff;
   outline: none;
   text-decoration: none;
 }
 
 a:visited {
-  color: #ccc;
+  color: #fff;
 }
 
 a:active {
-  color: #ccc;
+  color: #fff;
   outline: none;
   text-decoration: none;
 }
-
-

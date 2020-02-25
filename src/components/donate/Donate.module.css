@@ -40,6 +40,7 @@ form div {
 }
 
 .radioButton {
+    display: table;
     vertical-align: middle;
     height: 40px;
     position: relative;
@@ -75,4 +76,31 @@ form div {
     width: 30%;
     max-width: 100px;
     min-width: 10px;
+}
+
+.back {
+    width: fit-content;
+    padding: 0 2px 0 2px;
+    margin: 10px 0 20px;
+    color: #fff;
+}
+
+.back i {
+    font-size: 1.2rem;
+    padding: 0px 0px 4px;
+}
+
+.arrow1 {
+    float: left;
+    transform: rotate(-45deg);
+    width: 11px;
+    height: 11px;
+    border-radius: 2px;
+    border-bottom: 1.5px solid;
+    border-right: 1.5px solid;
+    margin: 7px;
+}
+
+.arrow3 {
+    margin-left: 5px;
 }

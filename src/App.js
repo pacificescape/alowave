@@ -7,20 +7,23 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import { ThemeProvider } from '@material-ui/styles';
+import theme from './Theme';
 
 function App() {
   return (
-  <Router>
-   <Switch>
+    <ThemeProvider theme={theme}>
+      <Router>
+        <Switch>
           <Route path="/donate">
-            <Donate/>
+            <Donate />
           </Route>
           <Route path="/">
-            <Main/>
+            <Main />
           </Route>
         </Switch>
-
-  </Router>
+      </Router>
+    </ThemeProvider>
   )
 }
 

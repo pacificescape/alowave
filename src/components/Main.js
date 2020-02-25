@@ -27,17 +27,19 @@ const Main = () => {
                             <i className="fab fa-telegram"/>
                         </a>
                         <a className={styles.icon} href="https://t.me/alowhair">
-                            <i class="fas fa-cut"></i>
+                            <i class="fas fa-fan"></i>
                         </a>
                         <a className={styles.icon} href="https://t.me/alowave">
                             <i class="fas fa-comment"></i>
                         </a>
                     </div>
                     <div className={styles.donateWrapper}>
-                        <a href="/donate" className={styles.donate + '' +  styles.icon}>
+                        <Link to="/donate" className={styles.donate + '' +  styles.icon}>
                             <i class="fas fa-coins"></i> <span>Donate</span>
-                        </a>
+                        </Link>
                     </div>
+                    <br/>
+                    <br/>
                     My projects:
                     <div className={styles.projectsWrapper}>
                         <div className={styles.project}>
