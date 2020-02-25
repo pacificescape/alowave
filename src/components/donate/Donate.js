@@ -12,10 +12,6 @@ import Button from '@material-ui/core/Button';
 import { useState } from 'react';
 
 const useStyles = makeStyles(theme => ({
-    root: {
-        display: 'flex',
-        flexWrap: 'wrap',
-    },
     margin: {
         margin: theme.spacing(1),
     },
@@ -24,15 +20,9 @@ const useStyles = makeStyles(theme => ({
     },
     textField: {
         width: 200,
-        margin: "10px"
     },
     FormControl: {
         color: theme.palette.primary.contrastText
-    },
-    MuiOutlinedInput: {
-        root: {
-            margin: '20px'
-        }
     },
 
 }));
@@ -81,17 +71,17 @@ const Donate = () => {
                         title="Donate">
                     </iframe> */}
 
-                    <form method="POST" action={"https://money.yandex.ru/quickpay/confirm.xml"}>
+                    <form method="POST" action={"https://money.yandex.ru/quickpay/confirm.xml"} autocomplete="off">
                         <input type="hidden" name="receiver" value="410015466202884" />
                         <input type="hidden" name="formcomment" value="Alowave donation ♥" />
                         <input type="hidden" name="short-dest" value="Alowave donation ♥" />
                         <input type="hidden" name="quickpay-form" value="donate" />
                         <input type="hidden" name="targets" value="Назначение платежа" />
-                        <FormControl variant="outlined" className={`${classes.MuiOutlinedInput}` + styles.field} >
+                        <FormControl variant="outlined" >
                             <InputLabel htmlFor="component-outlined">Ammount</InputLabel>
                             <OutlinedInput
+                                autocomplete="off"
                                 required
-                                data-type="number"
                                 id="component-outlined"
                                 placeholder={'100'}
                                 name="sum"
@@ -99,9 +89,11 @@ const Donate = () => {
                                 label="Sum"
                             />
                         </FormControl>
-                        <FormControl variant="outlined" className={`${classes.MuiOutlinedInput}`+ styles.field} >
+                        <br />
+                        <FormControl variant="outlined" >
                             <InputLabel htmlFor="component-outlined" >Comment</InputLabel>
                             <OutlinedInput
+                                autocomplete="off"
                                 id="component-outlined"
                                 placeholder={'Спасибо за ботa'}
                                 name="comment"
@@ -109,6 +101,7 @@ const Donate = () => {
                                 label="Comment"
                                 />
                         </FormControl>
+                        <br />
                         <div className={styles.radioButton}>
                         <FormControl required variant="outlined" className={classes.FormControl} >
                                 <RadioGroup aria-label="gender" name="gender1" value={selectedTypeDePayment} onChange={handleChangeType}>
@@ -117,6 +110,7 @@ const Donate = () => {
                             </RadioGroup>
                         </FormControl>
                         </div>
+                        <br />
                         <Button variant="contained"  type="submit" disabled color="primary">
                             Перевести
                         </Button>
