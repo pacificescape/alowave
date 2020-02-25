@@ -5,10 +5,8 @@ import { makeStyles } from '@material-ui/core';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import InputLabel from '@material-ui/core/InputLabel';
 import RadioGroup from '@material-ui/core/RadioGroup';
-import Input from '@material-ui/core/Input';
 import FormControl from '@material-ui/core/FormControl';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-import TextField from '@material-ui/core/TextField';
 import Radio from '@material-ui/core/Radio';
 import Button from '@material-ui/core/Button';
 import { useState } from 'react';
@@ -28,11 +26,19 @@ const useStyles = makeStyles(theme => ({
         width: 200,
         margin: "10px"
     },
+    FormControl: {
+        color: theme.palette.primary.contrastText
+    },
+    MuiOutlinedInput: {
+        root: {
+            margin: '20px'
+        }
+    },
+
 }));
 
 const Donate = () => {
     const classes = useStyles()
-    let title = 'На оплату серверов'
 
     const [selectedTypeDePayment, setSelectedTypeDePayment] = useState()
 
@@ -81,37 +87,37 @@ const Donate = () => {
                         <input type="hidden" name="short-dest" value="Alowave donation ♥" />
                         <input type="hidden" name="quickpay-form" value="donate" />
                         <input type="hidden" name="targets" value="Назначение платежа" />
-                        <FormControl variant="outlined" className={styles.field} >
+                        <FormControl variant="outlined" className={`${classes.MuiOutlinedInput}` + styles.field} >
                             <InputLabel htmlFor="component-outlined">Ammount</InputLabel>
                             <OutlinedInput
                                 required
                                 data-type="number"
                                 id="component-outlined"
-                                value="4568.25"
+                                placeholder={'100'}
                                 name="sum"
                                 onChange={handleChange}
                                 label="Sum"
                             />
                         </FormControl>
                         <FormControl variant="outlined" className={`${classes.MuiOutlinedInput}`+ styles.field} >
-                            <InputLabel htmlFor="component-outlined">Comment</InputLabel>
+                            <InputLabel htmlFor="component-outlined" >Comment</InputLabel>
                             <OutlinedInput
                                 id="component-outlined"
-                                value={'d'}
+                                placeholder={'Спасибо за ботa'}
                                 name="comment"
                                 onChange={handleChange}
                                 label="Comment"
                                 />
                         </FormControl>
                         <div className={styles.radioButton}>
-                        <FormControl variant="outlined" className={styles.field} >
+                        <FormControl required variant="outlined" className={classes.FormControl} >
                                 <RadioGroup aria-label="gender" name="gender1" value={selectedTypeDePayment} onChange={handleChangeType}>
-                                <FormControlLabel value="PC" control={<Radio />} label="Яндекс.Деньгами" />
                                 <FormControlLabel value="AC" control={<Radio />} label="Банковской картой" />
+                                <FormControlLabel value="PC" control={<Radio />} label="Яндекс.Деньгами" />
                             </RadioGroup>
                         </FormControl>
                         </div>
-                        <Button variant="contained"  type="submit" color="primary">
+                        <Button variant="contained"  type="submit" disabled color="primary">
                             Перевести
                         </Button>
                     </form>
