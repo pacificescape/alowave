@@ -86,7 +86,7 @@ const Donate = () => {
                                 placeholder={'100'}
                                 name="sum"
                                 onChange={handleChange}
-                                label="Sum"
+                                label="Ammount"
                             />
                         </FormControl>
                         <br />
