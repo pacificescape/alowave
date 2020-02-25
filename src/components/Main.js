@@ -3,6 +3,8 @@ import styles from './Main.module.css'
 import { Link } from "react-router-dom";
 
 const Main = () => {
+    let bell = true;
+
     return (
         <>
             <br />
@@ -15,6 +17,13 @@ const Main = () => {
                             className={styles.avatar}
                         />
                     </div>
+                    {bell ? <Link to="/bell">
+                        <div className={styles.toBell}>
+                            <div className={styles.bell}>
+                                <i className="fas fa-bell"></i>
+                            </div>
+                        </div>
+                    </Link> : null}
                     <div className={styles.textWrapper}>
                         <div>Alowave — developer from my heart ♥ </div>
                         <div>Python agnostic level coder</div>

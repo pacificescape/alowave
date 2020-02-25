@@ -1,6 +1,7 @@
 import React from 'react';
 import Main from './components/Main';
 import Donate from './components/donate/Donate';
+import Bell from './components/bell/Bell';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -17,6 +18,9 @@ function App() {
         <Switch>
           <Route path="/donate">
             <Donate />
+          </Route>
+          <Route path="/bell">
+            <Bell />
           </Route>
           <Route path="/">
             <Main />

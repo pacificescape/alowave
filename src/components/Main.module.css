@@ -102,3 +102,27 @@
     width: 30px;
     border-radius: 10px;
 }
+
+.toBell {
+    float: left;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.03);
+    width: 30px;
+    height: 100%;
+}
+
+.bell {
+    position: relative;
+    top: 47%;
+    animation: jingleBells 7s infinite ease-out;
+}
+
+@keyframes jingleBells {
+    0%, 28%, 48% {transform: rotate(0deg);}
+    30% {transform: rotate(-30deg);}
+    32%, 36%, 40%, 44% {transform: rotate(20deg);}
+    34%, 38%, 42%, 46% {transform: rotate(-20deg);}
+}
