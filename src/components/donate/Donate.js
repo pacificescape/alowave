@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Donate.module.css'
 import { Link } from "react-router-dom";
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Divider, TextField, Typography, Box } from '@material-ui/core';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
 import InputLabel from '@material-ui/core/InputLabel';
 import RadioGroup from '@material-ui/core/RadioGroup';
@@ -30,8 +30,10 @@ const useStyles = makeStyles(theme => ({
             marginTop: theme.spacing(1)
         }
     },
-    color: theme.palette.primary.contrastText
-
+    divider: {
+        margin: 'auto'
+    },
+    color: theme.palette.primary.contrastText,
 
 }));
 
@@ -39,15 +41,37 @@ const Donate = () => {
     const classes = useStyles()
 
     const [selectedTypeDePayment, setSelectedTypeDePayment] = useState()
+    const [ammountError, setAmmountError] = useState(false)
+    const [ammount, setAmmount] = useState('')
+    const [comment, setComment] = useState('')
 
-    const handleChange = () => {
+    const handleCommentChange = (event) => {
+        setComment(event.target.value)
+    }
 
+    const handleAmmountChange = (event) => {
+        if (RegExp(/\D/).test(event.target.value)) {
+            setAmmountError(true)
+            setAmmount(event.target.value)
+            return
+        }
+
+        setAmmount(event.target.value)
+        setAmmountError(false)
     }
 
     const handleChangeType = (event) => {
         setSelectedTypeDePayment(event.target.value)
-        console.log('setHandleChange')
     }
+
+    const comments = [
+        'Спасибо за бота',
+        'Люблю тебя, солнышко',
+        'Деньги тебе плачу',
+        'На корм кошке',
+    ]
+
+    const randomComment = () => comments[Math.floor(Math.random() * comments.length)]
 
     return (
         <>
@@ -68,10 +92,10 @@ const Donate = () => {
                     </div> */}
                     <Link to="/">
                         <div className={styles.back2}>
-                                <div className={styles.arrow2}/>
+                            <div className={styles.arrow2} />
                         </div>
                     </Link>
-                    <br/>
+                    <br />
                     {/*
                     <iframe
                         src={`https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=${title}&successURL=https%3A%2F%2Falowave.cc&quickpay=shop&account=410015466202884`}
@@ -91,65 +115,81 @@ const Donate = () => {
                         <input type="hidden" name="quickpay-form" value="donate" />
                         <input type="hidden" name="targets" value="Назначение платежа" />
                         <div className={styles.frotmControlWrapper}>
-                        <FormControl variant="outlined" color="secondary" className={classes.FormControl}>
-                            <InputLabel htmlFor="component-outlined">Ammount</InputLabel>
-                            <OutlinedInput
-                                autoComplete="off"
-                                required
-                                id="component-outlined"
-                                placeholder={'100'}
-                                name="sum"
-                                onChange={handleChange}
+                            <TextField
+                                className={classes.FormControl}
+                                onChange={handleAmmountChange}
+                                error={ammountError}
                                 label="Ammount"
+                                name="sum"
+                                value={ammount}
+                                placeholder={'100'}
+                                variant="outlined"
+                                id="ammountSum"
+                                color="secondary"
                             />
-                        </FormControl>
-                        <FormControl variant="outlined" color='secondary' className={classes.FormControl}>
-                            <InputLabel htmlFor="component-outlined" >Comment</InputLabel>
-                            <OutlinedInput
-                                autoComplete="off"
-                                id="component-outlined"
-                                placeholder={'Спасибо за ботa'}
-                                name="comment"
-                                onChange={handleChange}
+                            <TextField
+                                className={classes.FormControl}
+                                onChange={handleCommentChange}
                                 label="Comment"
-                                />
-                        </FormControl>
+                                name="comment"
+                                value={comment}
+                                placeholder={randomComment()}
+                                variant="outlined"
+                                id="comment"
+                                color="secondary"
+                            />
                         </div>
                         <div className={styles.radioButton}>
-                        <FormControl required variant="outlined">
+                            <FormControl required variant="outlined">
                                 <RadioGroup
                                     aria-label="gender"
                                     name="gender1"
                                     value={selectedTypeDePayment}
                                     onChange={handleChangeType}
                                     className={styles.wallet}>
-                                <FormControlLabel
-                                    className={styles.FormControlLabel}
-                                    value="AC"
-                                    control={
-                                    <Radio
-                                    icon={<img src="AC.png" alt="AC" className={styles.disabledWallet}/>}
-                                    checkedIcon={<img src="AC.png" alt="AC" className={styles.enabledWallet}/>}
-                                    >
-                                    </Radio>}>
-                                </FormControlLabel>
-                                <FormControlLabel
-                                    className={styles.FormControlLabel}
-                                    value="PC"
-                                    control={
-                                    <Radio
-                                        icon={<img src="PC.gif" alt="PC" className={styles.disabledWallet}/>}
-                                        checkedIcon={<img src="PC.gif" alt="PC" className={styles.enabledWallet}/>}
-                                        ></Radio>}>
-                                </FormControlLabel>
-                            </RadioGroup>
-                        </FormControl>
+                                    <FormControlLabel
+                                        className={styles.FormControlLabel}
+                                        value="AC"
+                                        control={
+                                            <Radio
+                                                icon={<img src="AC.png" alt="AC" className={styles.disabledWallet} />}
+                                                checkedIcon={<img src="AC.png" alt="AC" className={styles.enabledWallet} />}
+                                            >
+                                            </Radio>}>
+                                    </FormControlLabel>
+                                    <FormControlLabel
+                                        className={styles.FormControlLabel}
+                                        value="PC"
+                                        control={
+                                            <Radio
+                                                icon={<img src="PC.gif" alt="PC" className={styles.disabledWallet} />}
+                                                checkedIcon={<img src="PC.gif" alt="PC" className={styles.enabledWallet} />}
+                                            ></Radio>}>
+                                    </FormControlLabel>
+                                </RadioGroup>
+                            </FormControl>
                         </div>
                         <br />
-                        <Button variant="contained"  type="submit" color="primary">
+                        <Button variant="contained" type="submit" color="primary">
                             Перевести
                         </Button>
                     </form>
+                    <br />
+                    <Divider width="50%" className={classes.divider} />
+                    <div className={styles.Cryptography}>
+                        <Box fontSize={14} textAlign="left" color="text.primary" className={styles.cryptowalletWrapper}>
+                        <Box width='10%' display='inline'>ETH</Box><Box color="secondary.main" className={styles.cryptowallet}>
+                                0x5aC4972E493da4c45B7B273cd04515A3533d16Cb</Box>
+                        </Box>
+                        <Box fontSize={14} textAlign="left" color="text.primary" my='10px' className={styles.cryptowalletWrapper}>
+                            <Box width='10%'>BTC</Box><Box color="secondary.main" className={styles.cryptowallet}>
+                                19rWM1jdbG1bTZXTZsRGkCvYXELkbg3fFq</Box>
+                        </Box>
+                        <Box fontSize={14} textAlign="left" color="text.primary" className={styles.cryptowalletWrapper}>
+                            <Box width='10%'>BCH</Box><Box color="secondary.main" className={styles.cryptowallet}>
+                                qps3mcngnjkkd0ntf3cfkvsaxyzs34vemg7g38utyp</Box>
+                        </Box>
+                    </div>
 
                 </main>
             </div>

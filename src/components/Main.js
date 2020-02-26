@@ -19,7 +19,7 @@ const Main = () => {
                     {bell ? <Link to="/bell">
                         <div className={styles.toBell}>
                             <div className={styles.bell}>
-                                <i className="fas fa-bell"></i>
+                                <i class="fas fa-cog"></i>
                             </div>
                         </div>
                     </Link> : null}
@@ -54,6 +54,11 @@ const Main = () => {
                         <div className={styles.project}>
                             <a className={styles.projectIcon} href="https://t.me/ccurbot">
                                 <img src="https://t.me/i/userpic/320/ccurbot.jpg" alt="ccurbot"></img>
+                            </a>
+                        </div>
+                        <div className={styles.project}>
+                            <a className={styles.projectIcon} href="https://t.me/f0rden">
+                                <img src="https://t.me/i/userpic/320/f0rden.jpg" alt="f0rden"></img>
                             </a>
                         </div>
                     </div>

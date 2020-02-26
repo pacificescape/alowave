@@ -15,7 +15,7 @@
 @media screen and (max-device-width: 800px) {
     .Donate {
         width: 80%;
-        margin: 15vh auto;
+        margin: 5vh auto;
     }
 }
 
@@ -111,11 +111,13 @@ form {
     border-radius: 2px;
     border-bottom: 1.5px solid #ccc;
     border-right: 1.5px solid #ccc;
-    margin: 200px 10px;
+    margin: 275px 10px;
 }
 
 .arrow3 {
     margin-left: 5px;
+    white-space: pre-line;
+    text-overflow: ellipsis;
 }
 
 .disabledWallet {
@@ -150,4 +152,41 @@ form {
     padding-bottom: 100px;
     margin-bottom: 100px;
     overflow-x: auto;
+}
+
+.Cryptography {
+    overflow: hidden;
+    width: 60%;
+    margin: 20px auto 5px auto;
+    user-select: none;
+    /* // padding: 3px; */
+    align-items: center;
+    border-radius: 3px;
+}
+
+.cryptowallet {
+    display: inline-block;
+    font-family: Monospace;
+    font-size: 16px;
+    overflow: hidden;
+    width: 15vh;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    user-select: all;
+    margin: 10px 0 10px 10px;
+    padding: 3px;
+    border-radius: 3px;
+    background-color: #00000030
+}
+
+.cryptowalletWrapper {
+    margin: auto;
+    width: fit-content;
+}
+.cryptowalletWrapper div {
+    vertical-align: middle;
+    display: inline-block;
+}
+.cryptowalletWrapper div:nth-child(2n-1) {
+    width: 32px;
 }
