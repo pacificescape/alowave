@@ -1,11 +1,10 @@
 body {
   margin: 0;
   font-size: 1.3em;
-  font-family: Verdana, Geneva, Tahoma, 'Open Sans', sans-serif;
+  font-family: 'Montserrat', 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #282c34;
-  color: #fff;
   overflow-x: hidden;
 }
 

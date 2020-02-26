@@ -9,6 +9,7 @@
     background-color: rgba(40, 50, 76, 0.3);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.200);
     text-align: center;
+    color: #eee;
 }
 
 @media screen and (max-device-width: 920px) {

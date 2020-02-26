@@ -24,18 +24,22 @@
 }
 
 form {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: center; */
     margin: auto;
-    width: fit-content;
+    /* width: fit-content; */
 }
 
+.frotmControlWrapper {
+    width: 250px;
+    margin: auto;
+}
 
 .radioButton {
     vertical-align: middle;
-    height: 40px;
+    height: 50px;
     position: relative;
 }
 
@@ -107,7 +111,7 @@ form {
     border-radius: 2px;
     border-bottom: 1.5px solid #ccc;
     border-right: 1.5px solid #ccc;
-    margin: 192px 7px;
+    margin: 200px 10px;
 }
 
 .arrow3 {
@@ -134,4 +138,16 @@ form {
 
 .FormControlLabel {
     margin: 5px;
+}
+
+.FormControl {
+    display: block;
+    width: 100%;
+    margin: 10px;
+}
+
+.Donate::-webkit-scrollbar {
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+    overflow-x: auto;
 }

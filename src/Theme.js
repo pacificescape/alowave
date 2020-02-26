@@ -19,7 +19,7 @@ export default createMuiTheme({
       disableRipple: true,
     }
   },
-  typography: {
+  Typography: {
     color: '#eee',
   },
 });

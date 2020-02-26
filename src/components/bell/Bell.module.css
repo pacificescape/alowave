@@ -7,10 +7,11 @@
     margin: 5vh auto;
     padding: 15px 0;
     border-radius: 5px;
-    background-color: rgba(206, 224, 255, 0.83);
+    background-color: rgb(255, 255, 255);
     text-align: justify;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-    overflow: overlay;
+    overflow: hidden;
+    padding-bottom: 15px;
 }
 
 @media screen and (max-device-width: 800px) {
@@ -26,7 +27,7 @@
         width: 90%;
         font-weight: 300;
         font-size: 1rem;
-        overflow: hidden !important;
+        /* overflow: hidden ; */
     }
 
     .backWrapper {
@@ -39,11 +40,12 @@
 }
 
 .blog {
+    width: 90%;
+    height: 80vh;
+    overflow: -moz-hidden-unscrollable;
     color: #000;
-    overflow: auto;
     margin-right: 10px;
     margin-left: 32px;
-    width: 90%;
     font-weight: 300;
     font-size: 1rem;
     padding-bottom: 80px;
@@ -51,6 +53,10 @@
 
 .mainBlock {
     margin: auto;
+}
+
+.mainWrapper {
+    overflow: hidden;
 }
 
 .avatarWrapper {

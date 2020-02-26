@@ -23,8 +23,15 @@ const useStyles = makeStyles(theme => ({
         width: 200,
     },
     FormControl: {
-        color: theme.palette.primary.contrastText
+        margin: theme.spacing(1)
     },
+    override: {
+        FormControl: {
+            marginTop: theme.spacing(1)
+        }
+    },
+    color: theme.palette.primary.contrastText
+
 
 }));
 
@@ -83,7 +90,8 @@ const Donate = () => {
                         <input type="hidden" name="short-dest" value="Alowave donation ♥" />
                         <input type="hidden" name="quickpay-form" value="donate" />
                         <input type="hidden" name="targets" value="Назначение платежа" />
-                        <FormControl variant="outlined" color="secondary" >
+                        <div className={styles.frotmControlWrapper}>
+                        <FormControl variant="outlined" color="secondary" className={classes.FormControl}>
                             <InputLabel htmlFor="component-outlined">Ammount</InputLabel>
                             <OutlinedInput
                                 autoComplete="off"
@@ -95,8 +103,7 @@ const Donate = () => {
                                 label="Ammount"
                             />
                         </FormControl>
-                        <br />
-                        <FormControl variant="outlined" color='secondary'>
+                        <FormControl variant="outlined" color='secondary' className={classes.FormControl}>
                             <InputLabel htmlFor="component-outlined" >Comment</InputLabel>
                             <OutlinedInput
                                 autoComplete="off"
@@ -107,6 +114,7 @@ const Donate = () => {
                                 label="Comment"
                                 />
                         </FormControl>
+                        </div>
                         <div className={styles.radioButton}>
                         <FormControl required variant="outlined">
                                 <RadioGroup
