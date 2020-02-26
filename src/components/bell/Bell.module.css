@@ -1,52 +1,52 @@
-.Donate {
-    height: auto;
+.Bell {
+    height: 90vh;
     transform: scale(1);
     display: block;
-    width: 50%;
-    max-width: 700px;
-    margin: 20vh auto;
-    padding: 15px;
+    width: 80%;
+    max-width: 1400px;
+    margin: 5vh auto;
+    padding: 15px 0;
     border-radius: 5px;
-    background-color: rgba(40, 50, 76, 0.3);
-    text-align: center;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.200);
+    background-color: rgba(226, 226, 193, 0.4);
+    text-align: justify;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: overlay;
 }
 
 @media screen and (max-device-width: 800px) {
-    .Donate {
-        width: 80%;
-        margin: 15vh auto;
+    .Bell {
+        height: 100vh;
+        width: 100%;
+        margin: -5px auto;
+    }
+
+    .blog {
+        margin-right: 10px;
+        margin-left: 30px;
+        width: 90%;
+        font-weight: 300;
+        font-size: 1rem;
+        overflow: hidden !important;
+    }
+
+    .backWrapper {
+        display: block !important;
+    }
+
+    .backWrapper2 {
+        display: none;
     }
 }
 
-.iframe {
-    padding: 15px 0 15px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    margin: auto;
-    width: fit-content;
-}
-
-
-.radioButton {
-    vertical-align: middle;
-    height: 40px;
-    position: relative;
-}
-
-.field {
-    display: block;
-    width: auto;
-    margin: 30px;
-}
-
-.field input {
-    width: fit-content;
+.blog {
+    color: #000;
+    overflow: auto;
+    margin-right: 10px;
+    margin-left: 32px;
+    width: 90%;
+    font-weight: 300;
+    font-size: 1rem;
+    padding-bottom: 80px;
 }
 
 .mainBlock {
@@ -54,6 +54,7 @@ form {
 }
 
 .avatarWrapper {
+    margin-top: 12px;
     margin: auto;
     user-select: none;
 }
@@ -67,15 +68,16 @@ form {
     min-width: 10px;
 }
 
-.back {
-    width: fit-content;
-    padding: 0 2px 0 2px;
-    margin: 10px 0 20px;
-}
-
-.back i {
-    font-size: 1.2rem;
-    padding: 0px 0px 4px;
+.backWrapper {
+    display: none;
+    z-index: 100;
+    position: sticky;
+    float: left;
+    width: 0px;
+    height: 100vh;
+    top: 0px;
+    left: 0px;
+    margin-top: -100px;
 }
 
 .back2 {
@@ -84,7 +86,7 @@ form {
     left: 0px;
     position: absolute;
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: rgba(0, 0, 0, 0.1);
     width: 30px;
     height: 100%;
 }
@@ -101,37 +103,11 @@ form {
 }
 
 .arrow2 {
-    transform: rotate(135deg);
+    transform: rotate(-45deg);
     width: 11px;
     height: 11px;
     border-radius: 2px;
     border-bottom: 1.5px solid #ccc;
     border-right: 1.5px solid #ccc;
     margin: 192px 7px;
-}
-
-.arrow3 {
-    margin-left: 5px;
-}
-
-.disabledWallet {
-    width: 40px;
-    filter: grayscale(100%);
-}
-
-.enabledWallet {
-    width: 40px;
-}
-
-.wallet {
-    display: flex;
-    flex-direction: row !important;
-}
-
-.wallet :nth-child(even) {
-    margin: 0px;
-}
-
-.FormControlLabel {
-    margin: 5px;
 }

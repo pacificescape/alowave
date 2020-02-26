@@ -7,7 +7,6 @@ const Main = () => {
 
     return (
         <>
-            <br />
             <div className={styles.Main}>
                 <main className={styles.mainBlock}>
                     <div className={styles.avatarWrapper}>

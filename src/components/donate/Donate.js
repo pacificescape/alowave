@@ -44,7 +44,6 @@ const Donate = () => {
 
     return (
         <>
-            <br />
             <div className={styles.Donate}>
                 <main className={styles.mainBlock}>
                     <div className={styles.avatarWrapper}>
