@@ -117,12 +117,14 @@
 .bell {
     position: relative;
     top: 47%;
-    animation: jingleBells 7s infinite ease-out;
+    animation: jingleBells 3s  ease-in-out;
+    animation-delay: 2s;
 }
 
 @keyframes jingleBells {
     0%, 28%, 48% {transform: rotate(0deg);}
-    30% {transform: rotate(-30deg);}
-    32%, 36%, 40%, 44% {transform: rotate(20deg);}
-    34%, 38%, 42%, 46% {transform: rotate(-20deg);}
+    30% {transform: rotate(-20deg);}
+    32%, 35%, 41%, 44% {transform: rotate(15deg);}
+    34%, 46% {transform: rotate(-15deg);}
+    39%, 43% {transform: rotate(-18deg);}
 }
