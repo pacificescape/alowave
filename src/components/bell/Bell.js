@@ -11,6 +11,10 @@ const useStyles = makeStyles(theme => ({
         margin: '15px 0 0 0',
         overflow: 'auto',
         height: '75vh'
+    },
+
+    Link: {
+        color: 'rgb(150, 0, 0) !important'
     }
 }));
 
@@ -55,7 +59,7 @@ const Bell = () => {
                                         что у нас есть моральное право и утилитарная сообразность требовать декриминализации легких
                                         наркотиков и регрессивного применения новых норм на уголовно осужденных
                                         по данным статьям.
-                                        <Link href="https://zona.media/news/2020/02/24/litreev-sud">
+                                        <Link href="https://zona.media/news/2020/02/24/litreev-sud" className={classes.Link}>
                                             (https://zona.media/news/2020/02/24/litreev-sud)</Link>
 
                                     </p>
