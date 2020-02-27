@@ -15,7 +15,7 @@ code {
 
 #root {
   overflow: hidden;
-  height: 100vh;
+  height: 100%;
   background-color: rgb(31, 31, 31);
   background-position: 50% 90%;
   background-repeat: no-repeat;
@@ -49,16 +49,11 @@ a:active {
 html, body {
   position: fixed;
 }
-
+/*
 html, body {
   position: relative;
   overflow: hidden;
-}
-
-body {
-  position: fixed;
-  overflow: hidden;
-}
+} */
 
 body {
   position: fixed;

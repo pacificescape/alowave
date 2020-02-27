@@ -8,9 +8,10 @@ import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles(theme => ({
     Box: {
-        margin: '15px 0 0 0',
+        margin: '0 0 0 0',
         overflow: 'auto',
-        height: '75vh'
+        height: window.innerHeight - 1,
+        paddingBottom: '10px'
     },
 
     Link: {
@@ -32,18 +33,17 @@ const Bell = () => {
             <div className={styles.Bell}>
                 <main className={styles.mainBlock}>
                     <div className={styles.mainWrapper}>
-                        <div className={styles.avatarWrapper}>
-                            <img
-                                src="https://t.me/i/userpic/320/alexlitreev.jpg"
-                                alt="avatar"
-                                className={styles.avatar}
-                            />
-                        </div>
                         <div className={styles.blog}>
-                            <Typography className={classes.Box}>
-                                <Box fontWeight="fontWeightLight">
-                                    <p>
-
+                            <Typography component={'span'}>
+                                <Box fontWeight="fontWeightLight" className={classes.Box}>
+                                    <div className={styles.avatarWrapper}>
+                                        <img
+                                            src="https://t.me/i/userpic/320/alexlitreev.jpg"
+                                            alt="avatar"
+                                            className={styles.avatar}
+                                        />
+                                    </div>
+                                    <span>
                                         Проблема наркотиков очень сложна и неочевидна. Никто не хочет видеть, как
                                         близкий человек уходит от реальности с их помощью, однако все здравомыслящие
                                         люди согласны, что ситуация, когда тысячи молодых людей теряют годы жизни в
@@ -59,11 +59,11 @@ const Bell = () => {
                                         что у нас есть моральное право и утилитарная сообразность требовать декриминализации легких
                                         наркотиков и регрессивного применения новых норм на уголовно осужденных
                                         по данным статьям.
-                                        <Link href="https://zona.media/news/2020/02/24/litreev-sud" className={classes.Link}>
-                                            (https://zona.media/news/2020/02/24/litreev-sud)</Link>
+                                        <a href="https://zona.media/news/2020/02/24/litreev-sud" className={classes.Link}>
+                                            (https://zona.media/news/2020/02/24/litreev-sud)</a>
 
-                                    </p>
-                                    <p>
+                                    </span>
+                                    <span>
                                         В связи с этим публикую отрывок из эссе Олдоса Хаксли «Двери восприятия»:
 
                                         Все успокоительные средства и наркотики, низводящие человека до состояния овоща, все эйфорики,
@@ -93,7 +93,7 @@ const Bell = () => {
                                         еще какие-то - диетическими, образовательными, атлетическими. Но нужда в частых
                                         химических каникулах, дающих отдых от невыносимой самости и отвратительной среды
                                         окружения, совершенно бесспорно, останется прежней.
-                                </p>
+                                </span>
                                 </Box>
                             </Typography>
                         </div>

@@ -19,7 +19,7 @@ const Main = () => {
                     {bell ? <Link to="/bell">
                         <div className={styles.toBell}>
                             <div className={styles.bell}>
-                                <i class="fas fa-cog"></i>
+                                <i className="fas fa-cog"></i>
                             </div>
                         </div>
                     </Link> : null}

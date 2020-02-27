@@ -15,7 +15,7 @@
 @media screen and (max-device-width: 800px) {
     .Donate {
         width: 80%;
-        margin: 12vh auto;
+        margin: 5vh auto;
     }
     .cryptowallet {
         width: 33vw !important;
