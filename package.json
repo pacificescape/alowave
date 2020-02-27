@@ -18,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "rebuild": "react-scripts build && sudo rsync -r build/* /var/www/stickerstat.info/alowave/ && sudo service nginx restart"
   },
   "eslintConfig": {
     "extends": "react-app"
