@@ -29,14 +29,6 @@
         font-size: 1rem;
         /* overflow: hidden ; */
     }
-
-    .backWrapper {
-        display: block !important;
-    }
-
-    .backWrapper2 {
-        display: none;
-    }
 }
 
 .blog {
@@ -75,7 +67,6 @@
 }
 
 .backWrapper {
-    display: none;
     z-index: 100;
     position: sticky;
     float: left;
@@ -95,17 +86,6 @@
     background-color: rgba(0, 0, 0, 0.1);
     width: 30px;
     height: 100%;
-}
-
-.arrow1 {
-    float: left;
-    transform: rotate(-45deg);
-    width: 11px;
-    height: 11px;
-    border-radius: 2px;
-    border-bottom: 1.5px solid;
-    border-right: 1.5px solid;
-    margin: 7px;
 }
 
 .arrow2 {

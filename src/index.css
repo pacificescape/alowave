@@ -45,3 +45,24 @@ a:active {
   outline: none;
   text-decoration: none;
 }
+
+html, body {
+  position: fixed;
+}
+
+html, body {
+  position: relative;
+  overflow: hidden;
+}
+
+body {
+  position: fixed;
+  overflow: hidden;
+}
+
+body {
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}

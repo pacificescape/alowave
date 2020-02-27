@@ -17,18 +17,13 @@ const useStyles = makeStyles(theme => ({
         margin: theme.spacing(1),
     },
     withoutLabel: {
-        marginTop: theme.spacing(3),
+        marginTop: theme.spacing(2),
     },
     textField: {
         width: 200,
     },
     FormControl: {
-        margin: theme.spacing(1)
-    },
-    override: {
-        FormControl: {
-            marginTop: theme.spacing(1)
-        }
+        margin: '4px'
     },
     divider: {
         margin: 'auto'
@@ -95,7 +90,6 @@ const Donate = () => {
                             <div className={styles.arrow2} />
                         </div>
                     </Link>
-                    <br />
                     {/*
                     <iframe
                         src={`https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=${title}&successURL=https%3A%2F%2Falowave.cc&quickpay=shop&account=410015466202884`}
@@ -178,15 +172,15 @@ const Donate = () => {
                     <Divider width="50%" className={classes.divider} />
                     <div className={styles.Cryptography}>
                         <Box fontSize={14} textAlign="left" color="text.primary" className={styles.cryptowalletWrapper}>
-                        <Box width='10%' display='inline'>ETH</Box><Box color="secondary.main" className={styles.cryptowallet}>
+                        <Box>ETH</Box><Box color="secondary.main" className={styles.cryptowallet}>
                                 0x5aC4972E493da4c45B7B273cd04515A3533d16Cb</Box>
                         </Box>
                         <Box fontSize={14} textAlign="left" color="text.primary" my='10px' className={styles.cryptowalletWrapper}>
-                            <Box width='10%'>BTC</Box><Box color="secondary.main" className={styles.cryptowallet}>
+                            <Box>BTC</Box><Box color="secondary.main" className={styles.cryptowallet}>
                                 19rWM1jdbG1bTZXTZsRGkCvYXELkbg3fFq</Box>
                         </Box>
                         <Box fontSize={14} textAlign="left" color="text.primary" className={styles.cryptowalletWrapper}>
-                            <Box width='10%'>BCH</Box><Box color="secondary.main" className={styles.cryptowallet}>
+                            <Box>BCH</Box><Box color="secondary.main" className={styles.cryptowallet}>
                                 qps3mcngnjkkd0ntf3cfkvsaxyzs34vemg7g38utyp</Box>
                         </Box>
                     </div>

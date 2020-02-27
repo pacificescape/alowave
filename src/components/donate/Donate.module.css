@@ -15,7 +15,20 @@
 @media screen and (max-device-width: 800px) {
     .Donate {
         width: 80%;
-        margin: 5vh auto;
+        margin: 12vh auto;
+    }
+    .cryptowallet {
+        width: 33vw !important;
+    }
+}
+
+@media screen and (max-device-width: 350px) {
+    .Donate {
+        width: 80%;
+        margin: 1vh auto;
+    }
+    .cryptowallet {
+        width: 33vw !important;
     }
 }
 
@@ -59,6 +72,7 @@ form {
 
 .avatarWrapper {
     margin: auto;
+    margin-bottom: 10px;
     user-select: none;
 }
 
@@ -165,24 +179,23 @@ form {
 }
 
 .cryptowallet {
+    text-align: left;
     display: inline-block;
     font-family: Monospace;
     font-size: 16px;
     overflow: hidden;
-    width: 15vh;
+    width: 24vw;
+    max-width: fit-content;
     white-space: nowrap;
     text-overflow: ellipsis;
     user-select: all;
-    margin: 10px 0 10px 10px;
+    margin: 5px 0 5px 10px;
     padding: 3px;
     border-radius: 3px;
     background-color: #00000030
 }
 
-.cryptowalletWrapper {
-    margin: auto;
-    width: fit-content;
-}
+
 .cryptowalletWrapper div {
     vertical-align: middle;
     display: inline-block;
