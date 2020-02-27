@@ -110,6 +110,7 @@ const Donate = () => {
                         <input type="hidden" name="targets" value="Назначение платежа" />
                         <div className={styles.frotmControlWrapper}>
                             <TextField
+                                required
                                 className={classes.FormControl}
                                 onChange={handleAmmountChange}
                                 error={ammountError}
@@ -136,16 +137,19 @@ const Donate = () => {
                         <div className={styles.radioButton}>
                             <FormControl required variant="outlined">
                                 <RadioGroup
-                                    aria-label="gender"
-                                    name="gender1"
+                                    required
+                                    aria-label="paymentType"
+                                    name="paymentType"
                                     value={selectedTypeDePayment}
                                     onChange={handleChangeType}
                                     className={styles.wallet}>
                                     <FormControlLabel
+                                        required
                                         className={styles.FormControlLabel}
                                         value="AC"
                                         control={
                                             <Radio
+                                            required
                                                 icon={<img src="AC.png" alt="AC" className={styles.disabledWallet} />}
                                                 checkedIcon={<img src="AC.png" alt="AC" className={styles.enabledWallet} />}
                                             >
@@ -164,7 +168,7 @@ const Donate = () => {
                             </FormControl>
                         </div>
                         <br />
-                        <Button variant="contained" type="submit" color="primary">
+                        <Button variant="contained" type="submit" disabled={ammountError} color="primary">
                             Перевести
                         </Button>
                     </form>
