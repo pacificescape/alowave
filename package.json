@@ -2,7 +2,7 @@
   "name": "alowave",
   "version": "0.1.0",
   "private": true,
-  "public": "https://alowave.cc",
+  "public": "https://alowave.stickerstat.info/",
   "dependencies": {
     "@material-ui/core": "^4.9.4",
     "@material-ui/icons": "^4.9.1",
