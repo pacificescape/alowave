@@ -86,21 +86,10 @@ const Donate = () => {
                         </Link>
                     </div> */}
                     <Link to="/">
-                        <div className={styles.back2}>
-                            <div className={styles.arrow2} />
+                        <div className={styles.back}>
+                            <div className={styles.arrow} />
                         </div>
                     </Link>
-                    {/*
-                    <iframe
-                        src={`https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=${title}&successURL=https%3A%2F%2Falowave.cc&quickpay=shop&account=410015466202884`}
-                        className={styles.iframe}
-                        width="100%"
-                        height="313"
-                        frameBorder="0"
-                        allowtransparency="true"
-                        scrolling="no"
-                        title="Donate">
-                    </iframe> */}
 
                     <form method="POST" action={"https://money.yandex.ru/quickpay/confirm.xml"} autoComplete="off">
                         <input type="hidden" name="receiver" value="410015466202884" />
