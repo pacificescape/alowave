@@ -1,65 +1,38 @@
-import React from 'react';
+import React from 'react'
 import styles from './Main.module.css'
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom'
+import { Userpic } from './Userpic'
+import { ButtonsLine } from './ButtonsLine'
 
 const Main = () => {
-    let bell = false;
 
     return (
         <>
             <div className={styles.Main}>
                 <main className={styles.mainBlock}>
                     <div className={styles.avatarWrapper}>
-                        <img
-                            src="https://t.me/i/userpic/320/alowave.jpg"
-                            alt="avatar"
-                            className={styles.avatar}
-                        />
+                        <Userpic username={'alowave'} styles={styles.avatar}/>
                     </div>
-                    {bell ? <Link to="/bell">
-                        <div className={styles.toBell}>
-                            <div className={styles.bell}>
-                                <i className="fas fa-cog"></i>
-                            </div>
-                        </div>
-                    </Link> : null}
                     <div className={styles.textWrapper}>
-                        <div>Alowave — developer from my heart ♥ </div>
-                        <div>Python agnostic level coder</div>
+                        <div>
+                            Alowave - dev with animals <br/>
+                            Python Dev, HTML programmer, Indian Teacher
+                        </div>
                     </div>
-                    <div className={styles.buttonsWrapper}>
-                        <a className={styles.icon} href="https://github.com/alowave">
-                            <i className="fab fa-github"/>
-                        </a>
-                        <a className={styles.icon} href="https://t.me/lowdev">
-                            <i className="fab fa-telegram"/>
-                        </a>
-                        <a className={styles.icon} href="https://t.me/alowave">
-                            <i className="fas fa-comment"></i>
-                        </a>
-                    </div>
+                    <ButtonsLine/>
                     <div className={styles.donateWrapper}>
                         <Link to="/donate" className={styles.donate + '' +  styles.icon}>
                             Поддержать
                         </Link>
                     </div>
                     <br/>
-                    <span className={styles.myProjectsTitle}>Мои пректы:</span>
+                    <span className={styles.myProjectsTitle}>Мои проекты:</span>
                     <div className={styles.projectsWrapper}>
                         <div className={styles.project}>
-                            <a className={styles.projectIcon} href="https://t.me/yamdbot">
-                                <img src="https://t.me/i/userpic/320/yamdbot.jpg" alt="yamdbot"></img>
-                            </a>
+                            <Userpic username={'yamdbot'} styles={styles.projectIcon}/>
                         </div>
                         <div className={styles.project}>
-                            <a className={styles.projectIcon} href="https://t.me/ccurbot">
-                                <img src="https://t.me/i/userpic/320/ccurbot.jpg" alt="ccurbot"></img>
-                            </a>
-                        </div>
-                        <div className={styles.project}>
-                            <a className={styles.projectIcon} href="https://t.me/f0rden">
-                                <img src="https://t.me/i/userpic/320/f0rden.jpg" alt="f0rden"></img>
-                            </a>
+                            <Userpic username={'ccurbot'} styles={styles.projectIcon}/>
                         </div>
                     </div>
                 </main>
