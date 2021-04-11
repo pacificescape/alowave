@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export const Userpic = (props) => {
-    const [url, setUrl] = useState(`https://t.me/i/userpic/320/${props.username}.jpg`)
+    const [url, setUrl] = useState(`https://tx.me/i/userpic/320/${props.username}.jpg`)
 
     const handleChangeSrc = () => {
         setUrl(`https://tx.me/i/userpic/320/${props.username}.jpg`)

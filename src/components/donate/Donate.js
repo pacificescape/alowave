@@ -140,7 +140,7 @@ const Donate = () => {
                         </div>
                     </Link>
 
-                    <form method="POST" action={"https://money.yandex.ru/quickpay/confirm.xml"} autoComplete="off">
+                    <form method="POST" action={"https://yoomoney.ru/quickpay/confirm.xml"} autoComplete="off">
                         <input type="hidden" name="receiver" value="410015466202884" />
                         <input type="hidden" name="formcomment" value="Alowave donation ♥" />
                         <input type="hidden" name="short-dest" value="Alowave donation ♥" />

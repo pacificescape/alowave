@@ -34,6 +34,9 @@ const Main = () => {
                         <div className={styles.project}>
                             <Userpic username={'ccurbot'} styles={styles.projectIcon}/>
                         </div>
+                        <div className={styles.project}>
+                            <Userpic username={'tikdobot'} styles={styles.projectIcon}/>
+                        </div>
                     </div>
                 </main>
             </div>
